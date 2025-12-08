@@ -686,7 +686,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6683bc3b94c3b9547866c50f611071c7, type: 3}
   m_Name: 
@@ -698,26 +698,6 @@ MonoBehaviour:
   baseOrbs: 3
   speedPerLevel: 20
   damagePerLevel: 2
---- !u!114 &815743981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815743969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cce81833940d6b942ae0a6b4d421b887, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorCuchilla
-  cuchillaPrefab: {fileID: 6822568320109129618, guid: c07c160fb81a5ab4eab288bc6eb742e7, type: 3}
-  nivel: 1
-  "da\xF1oBase": 25
-  cooldownBase: 1
-  "tama\xF1oBase": {x: 1, y: 1, z: 2}
-  "incrementoDa\xF1o": 5
-  "incrementoTama\xF1o": {x: 0.2, y: 0, z: 0.3}
-  decrementoCooldown: 0.05
 --- !u!1 &876070345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,7 +1274,6 @@ PrefabInstance:
       objectReference: {fileID: 6822568320109129618, guid: c07c160fb81a5ab4eab288bc6eb742e7, type: 3}
     m_RemovedComponents:
     - {fileID: 7989472452515683767, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-    - {fileID: 5253391897745235650, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 326271331332810960, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
@@ -1306,46 +1285,17 @@ PrefabInstance:
       addedObject: {fileID: 815743977}
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 815743976}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 815743981}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 815743980}
+    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 815743976}
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815743979}
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815743978}
-    - targetCorrespondingSourceObject: {fileID: 8825118534637647738, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1590300036997377516}
   m_SourcePrefab: {fileID: 100100000, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
---- !u!1 &1590300036997377514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8825118534637647738, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-  m_PrefabInstance: {fileID: 1590300036997377513}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1590300036997377516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590300036997377514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67581035a0577af46a4d203e3862f6a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorFrostNova
-  frostNovaPrefab: {fileID: 4761428965184973721, guid: 9f96035d5c222804d9c6c2904bf1ff9e, type: 3}
-  nivel: 1
-  "da\xF1oBase": 2
-  ralentizacionBase: 2
-  "progresionDa\xF1o": 0.5
-  progresionRalent: 0.5
 --- !u!1001 &5333425695380689234
 PrefabInstance:
   m_ObjectHideFlags: 0

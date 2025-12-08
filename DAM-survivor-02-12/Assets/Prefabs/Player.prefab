@@ -36,6 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2014291557618791979}
+  - {fileID: 7743249332787062931}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6267769501928217486
@@ -141,6 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8c1a84e810a5642ad88b3819a65bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  mainCameraGO: {fileID: 0}
+  sacudida: {fileID: 0}
 --- !u!114 &7989472452515683767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6cefe932b6b76140862d7a174c84c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LanzadorArma
-  armaPrefab: {fileID: 585857481478582551, guid: 8600516e38c18ce47a74cea8d3857a79, type: 3}
+  armas: []
   spawn: {fileID: 2014291557618791979}
   ratioDeDisparo: 6
 --- !u!1 &8469573650469220398
@@ -187,3 +190,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 326271331332810960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8825118534637647738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7743249332787062931}
+  - component: {fileID: 5253391897745235650}
+  m_Layer: 0
+  m_Name: Auras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7743249332787062931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825118534637647738}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 326271331332810960}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5253391897745235650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825118534637647738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67581035a0577af46a4d203e3862f6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorFrostNova
+  frostNovaPrefab: {fileID: 4761428965184973721, guid: 9f96035d5c222804d9c6c2904bf1ff9e, type: 3}
+  nivel: 1
+  "da\xF1oBase": 2
+  ralentizacionBase: 2
+  "progresionDa\xF1o": 0.5
+  progresionRalent: 0.5

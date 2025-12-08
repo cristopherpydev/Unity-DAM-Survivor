@@ -1,27 +1,27 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class FrostNova : MonoBehaviour
 {
     public int dotDamage = 2;
     public float dotTime = 0.25f;
-
     public float ralentizacion = 2f;
 
-    private Transform jugador;
-    private float tiempoAcumulado = 0f;
+    public Transform objetivo;  
 
-    // Lista de todos los enemigos dentro
+    private float tiempoAcumulado = 0f;
     private List<EnemyController> enemigosDentro = new List<EnemyController>();
 
     void Start()
     {
-        jugador = GameObject.FindGameObjectWithTag("Player").transform;
+        if (objetivo == null)
+            objetivo = transform.parent;
     }
 
     void Update()
     {
-        transform.position = jugador.position;
+        if (objetivo != null)
+            transform.position = objetivo.position;
 
         tiempoAcumulado += Time.deltaTime;
 
@@ -35,7 +35,6 @@ public class FrostNova : MonoBehaviour
                     enemy.Ralentizar(ralentizacion);
                 }
             }
-
             tiempoAcumulado = 0f;
         }
     }
@@ -45,11 +44,8 @@ public class FrostNova : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
-
             if (enemy != null && !enemigosDentro.Contains(enemy))
-            {
                 enemigosDentro.Add(enemy);
-            }
         }
     }
 
@@ -58,10 +54,9 @@ public class FrostNova : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
-            enemy.ResetVeloc();
-
-            if (enemy != null && enemigosDentro.Contains(enemy))
+            if (enemy != null)
             {
+                enemy.ResetVeloc();
                 enemigosDentro.Remove(enemy);
             }
         }

@@ -16,8 +16,7 @@ public class Rayo : MonoBehaviour
     {
         if (spawnPosition == null)
         {
-            spawnPosition = GameObject.FindGameObjectWithTag("Player")
-                .transform.Find("SpawnPosition").transform;
+            spawnPosition = GameObject.FindGameObjectWithTag("Player").transform.Find("SpawnPosition").transform;
         }
 
         Destroy(gameObject, tiempoVida);
