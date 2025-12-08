@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6575639853722738389}
   - component: {fileID: 5082378745904447772}
   - component: {fileID: 4248486742664905153}
+  - component: {fileID: 1719949977834665965}
   m_Layer: 0
   m_Name: Chakram boomerang
   m_TagString: Untagged
@@ -156,3 +157,23 @@ MonoBehaviour:
   returnSpeed: 14
   tiempoAntesDeVolver: 1
   damage: 10
+  nivelArma: 1
+--- !u!114 &1719949977834665965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3579617465790815876}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3580d5da0bd92474fa050115f1a22be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorBoomerang
+  boomerang: {fileID: 0}
+  ratioDisparo: 1
+  lvl: 1
+  baseDamage: 2
+  multiplier: 1.2
+  currentDamage: 0
+  subirNivelActionName: SubirNivel

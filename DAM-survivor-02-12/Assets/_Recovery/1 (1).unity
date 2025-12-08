@@ -359,6 +359,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3d14a9a6b2ceb469c15d151552a614, type: 3}
+--- !u!1 &221325365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221325366}
+  - component: {fileID: 221325367}
+  m_Layer: 0
+  m_Name: escudoOrbital
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221325366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221325365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 695006229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221325367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221325365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6683bc3b94c3b9547866c50f611071c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorOrbital
+  prefabOrbe: {fileID: 0}
+  cantidadOrbes: 3
+  distancia: 2
+  velocidadRotacion: 180
 --- !u!1 &330585543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8613657750401242815, guid: 9d3b90183ee764447846e468faa10edf, type: 3}
@@ -633,33 +681,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41514a30f4097814590d03d32e00b9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WeaponManager
-  armasPrefab:
-  - {fileID: 199315484580571585, guid: 716ef14c2bff4a346844c954e0216322, type: 3}
-  - {fileID: 3579617465790815876, guid: c585fe7d2f04c634d97f64ebebdd1ed8, type: 3}
---- !u!114 &815743978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815743969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3580d5da0bd92474fa050115f1a22be7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorBoomerang
-  boomerang: {fileID: 3579617465790815876, guid: c585fe7d2f04c634d97f64ebebdd1ed8, type: 3}
-  ratioDisparo: 1
-  lvl: 1
-  baseDamage: 2
-  multiplier: 1.2
-  currentDamage: 0
-  subirNivelActionName: SubirNivel
+  armasPrefab: []
 --- !u!1 &876070345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1088,104 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f3d14a9a6b2ceb469c15d151552a614, type: 3}
+--- !u!1 &1394632957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394632958}
+  - component: {fileID: 1394632959}
+  m_Layer: 0
+  m_Name: frostNova
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1394632958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394632957}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 695006229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1394632959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394632957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67581035a0577af46a4d203e3862f6a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorFrostNova
+  frostNova: {fileID: 0}
+  radioFrostNova: 1
+  lvl: 1
+--- !u!1 &1624856269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624856270}
+  - component: {fileID: 1624856271}
+  m_Layer: 0
+  m_Name: bumeran
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624856270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624856269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 695006229}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1624856271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624856269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3580d5da0bd92474fa050115f1a22be7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LanzadorBoomerang
+  boomerang: {fileID: 0}
+  ratioDisparo: 1
+  lvl: 1
+  baseDamage: 2
+  multiplier: 1.2
+  currentDamage: 0
+  subirNivelActionName: SubirNivel
 --- !u!1001 &962608421049311489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1241,6 +1366,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 326271331332810960, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: 0
       addedObject: {fileID: 385481358}
+    - targetCorrespondingSourceObject: {fileID: 326271331332810960, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 221325366}
+    - targetCorrespondingSourceObject: {fileID: 326271331332810960, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1624856270}
+    - targetCorrespondingSourceObject: {fileID: 326271331332810960, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1394632958}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
@@ -1248,9 +1382,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815743976}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 815743978}
   m_SourcePrefab: {fileID: 100100000, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
 --- !u!1001 &5333425695380689234
 PrefabInstance:
