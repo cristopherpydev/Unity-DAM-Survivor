@@ -5,7 +5,7 @@ public class Hacha : MonoBehaviour
     [Header("Datos del Hacha")]
     public float speed = 10f;
     public float tiempoVida = 5f;
-    public int damage = 25;
+    public int damage = 10;
 
     // Update is called once per frame
     void Start()

@@ -1,15 +1,30 @@
 using UnityEngine;
-using System.Collections;
 
 public class LanzadorFrostNova : MonoBehaviour
 {
-    public GameObject frostNova;
-    public float radioFrostNova = 1f;
+    [Header("Prefab Frost Nova")]
+    public GameObject frostNovaPrefab;
 
-    public int lvl = 1;
-
+    [Header("Estadísticas")]
+    public int nivel = 1;      
+    public int dañoBase = 2;               
+    public float ralentizacionBase = 2f;   
+    public float progresionDaño = 0.5f;    
+    public float progresionRalent = 0.5f;  
     void Start()
     {
-        Instantiate(frostNova, transform.position, transform.rotation);
+        GameObject frost = Instantiate(frostNovaPrefab, transform.position, Quaternion.identity);
+
+        FrostNova frostScript = frost.GetComponent<FrostNova>();
+        if (frostScript != null)
+        {
+            frostScript.dotDamage = Mathf.RoundToInt(dañoBase * (1 + (nivel - 1) * progresionDaño));
+            frostScript.ralentizacion = ralentizacionBase * (1 + (nivel - 1) * progresionRalent);
+        }
+    }
+
+    public void SubirNivel()
+    {
+        nivel++;
     }
 }

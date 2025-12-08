@@ -6,7 +6,7 @@ public class EscudoOrbital : MonoBehaviour
     public float distancia = 2f;
     public float velocidadRotacion = 180f;
     public float anguloInicial = 0f;
-    public int damage = 10; 
+    public int damage = 10;
 
     private float anguloActual;
 
@@ -19,14 +19,13 @@ public class EscudoOrbital : MonoBehaviour
     {
         if (player == null) return;
 
-        //para hacer que rote alrededor del jugador 
+        // ROTACION ORBITAL
         anguloActual += velocidadRotacion * Time.deltaTime;
         float rad = anguloActual * Mathf.Deg2Rad;
 
         Vector3 offset = new Vector3(Mathf.Cos(rad), 0, Mathf.Sin(rad)) * distancia;
         transform.position = player.position + offset;
 
-        // Opcional:el orbe mira hacia afuera
         transform.LookAt(player.position);
     }
 
@@ -36,10 +35,7 @@ public class EscudoOrbital : MonoBehaviour
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
             if (enemy != null)
-            {
                 enemy.Recibirdano(damage);
-                Debug.Log(damage);
-            }
         }
     }
 }

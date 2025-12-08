@@ -648,7 +648,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3580d5da0bd92474fa050115f1a22be7, type: 3}
   m_Name: 
@@ -660,44 +660,6 @@ MonoBehaviour:
   multiplier: 1.2
   currentDamage: 0
   subirNivelActionName: SubirNivel
---- !u!114 &815743979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0bba0330edff204f8867343a21ccc59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorHacha
-  hachaPrefab: {fileID: 4057599776085108960, guid: b85dad69f0a2557498a38b05336393fa, type: 3}
-  nivel: 1
-  "da\xF1oBase": 10
-  progresion: 0.5
-  velocidadHacha: 10
-  delayEntreHachas: 0.2
-  intervaloDisparo: 1
---- !u!114 &815743980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815743969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6683bc3b94c3b9547866c50f611071c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LanzadorOrbital
-  prefabOrbe: {fileID: 199315484580571585, guid: 716ef14c2bff4a346844c954e0216322, type: 3}
-  level: 1
-  baseDamage: 10
-  baseSpeed: 180
-  baseOrbs: 3
-  speedPerLevel: 20
-  damagePerLevel: 2
 --- !u!1 &876070345
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,12 +1248,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815743976}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 815743980}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 815743979}
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815743978}

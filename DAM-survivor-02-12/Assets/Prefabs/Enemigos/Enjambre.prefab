@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   Stats: {fileID: 11400000, guid: 3104ad42dc167814aa467f360c36013a, type: 2}
-  orbeDorado: {fileID: 778344673684070159, guid: fce790096b5217340a146270010f1e06, type: 3}
+  orbeDorado: {fileID: 1400974717331694830, guid: 041715143dc36064681c4c461573fc1c, type: 3}
   orbeVerde: {fileID: 8857080461293023876, guid: 0ffcd54257e381044bd0a29b5ed3fe4d, type: 3}
   orbeAzul: {fileID: 8857080461293023876, guid: d8a9ab7ca460a324a816a6714e4b5036, type: 3}
   damageOutputPrefab: {fileID: 3754372865672535855, guid: 04ee4b6c22f8f784aa4121c426d32237, type: 3}
