@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    private int currentHealth;
-    private int maxHealth = 100;
+    public int currentHealth;
+    public int maxHealth = 100;
     private int ataque = 5;
     private int defensa = 0;
     public GameObject mainCameraGO; // referencia al objeto que tiene CameraShake
@@ -51,14 +51,13 @@ public class PlayerStats : MonoBehaviour
 
             Debug.Log("Vida actual: " + currentHealth);
 
-            if (sacudida != null && sacudida.gameObject.activeInHierarchy)
+            if (mainCameraGO != null)
             {
-                Debug.Log("Llamando a Shake en " + sacudida.gameObject.name);
-                sacudida.Shake();
-            }
-            else
-            {
-                Debug.LogWarning("Sacudida es null o inactiva");
+                CameraShake cameraShake = mainCameraGO.GetComponent<CameraShake>();
+                if (cameraShake != null)
+                {
+                    cameraShake.Shake();
+                }
             }
 
             if (currentHealth <= 0)
@@ -77,8 +76,7 @@ public class PlayerStats : MonoBehaviour
             experiencia -= expSubida;
             nivel++;
             
-            // Opcional: Aumentar la experiencia necesaria para el siguiente nivel
-            // expSubida = (int)(expSubida * 1.2f); 
+            expSubida = (int)(expSubida * 1.2f); 
             Debug.Log("¡Subida de nivel! Nivel actual: " + nivel);
         }
     }

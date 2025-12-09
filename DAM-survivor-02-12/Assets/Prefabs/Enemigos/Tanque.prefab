@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 3750720933888012207}
   - component: {fileID: 3108412469660332801}
   - component: {fileID: 8722262377408840885}
+  - component: {fileID: 497652669432487596}
+  - component: {fileID: -2975598481067547489}
   m_Layer: 0
   m_Name: Tanque
   m_TagString: Enemy
@@ -131,3 +133,52 @@ MonoBehaviour:
   orbeVerde: {fileID: 8857080461293023876, guid: 0ffcd54257e381044bd0a29b5ed3fe4d, type: 3}
   orbeAzul: {fileID: 8857080461293023876, guid: d8a9ab7ca460a324a816a6714e4b5036, type: 3}
   damageOutputPrefab: {fileID: 3754372865672535855, guid: 04ee4b6c22f8f784aa4121c426d32237, type: 3}
+--- !u!54 &497652669432487596
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895878832865680521}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!195 &-2975598481067547489
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895878832865680521}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

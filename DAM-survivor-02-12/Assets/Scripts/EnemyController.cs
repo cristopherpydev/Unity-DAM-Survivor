@@ -21,6 +21,11 @@ public class EnemyController : MonoBehaviour
     private int damage;
     private int defense = 0;
     private float speed;
+    private bool estaRalentizado = false;
+
+    private UnityEngine.AI.NavMeshAgent agent;
+    
+    
 
     /// ////////////////////////////////// Funciones Unity //////////////////
     void Awake()
@@ -30,6 +35,8 @@ public class EnemyController : MonoBehaviour
         damage = Stats.Damage;
         defense = Stats.Defense;
         speed = Stats.Speed;
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent.speed = Stats.Speed; //la razon de esto es que quiero seguir usando mis scriptable Objects
     }
 
     void Start()
@@ -45,12 +52,7 @@ public class EnemyController : MonoBehaviour
     {
         if (player != null)
         {
-            // Cojo la direccion
-            Vector3 direccion = player.transform.position - transform.position;
-            direccion.Normalize();
-
-            // Moverme hacia el jugador
-            transform.position += direccion * speed * Time.deltaTime;
+            agent.SetDestination(player.transform.position);
         }
     }
 
@@ -73,15 +75,21 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void Ralentizar(float ralentizacion)
+    public void Ralentizar(float factor)
     {
-        speed = speed / ralentizacion;
+        if (!estaRalentizado)
+        {
+            agent.speed = Stats.Speed / factor;
+            estaRalentizado = true;
+        }
     }
 
     public void ResetVeloc()
     {
-        speed = Stats.Speed;
+        agent.speed = Stats.Speed;
+        estaRalentizado = false;
     }
+
 
     private void Morir()
     {

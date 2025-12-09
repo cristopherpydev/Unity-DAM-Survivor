@@ -3,11 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject pauseMenuUI;   // Panel del menú de pausa
+    public GameObject pauseMenuUI;   
     bool isPaused = false;
 
-    Controles inputActions;          // Tu clase generada
-
+    Controles inputActions;         
     void Awake()
     {
         inputActions = new Controles();

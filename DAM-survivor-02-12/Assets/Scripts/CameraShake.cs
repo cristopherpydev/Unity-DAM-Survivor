@@ -1,21 +1,15 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraShake : MonoBehaviour
-{
+public class CameraShake : MonoBehaviour{
     public float duration = 0.2f; 
-    public float magnitude = 0.3f;
-
+    public FollowCamera followCamera;
     private Vector3 originalPos;
 
-    void Awake()
-    {
-        originalPos = transform.localPosition;
-    }
 
     public void Shake()
     {
-        Debug.Log("Shake() llamado en " + gameObject.name);
+        Debug.Log("He llegado hasta el shake.");
         StopAllCoroutines();
         StartCoroutine(ShakeRoutine());
     }
@@ -23,19 +17,20 @@ public class CameraShake : MonoBehaviour
 
     private IEnumerator ShakeRoutine()
     {
+        originalPos = transform.position;
         float elapsed = 0f;
 
+        followCamera.enabled = false;
         while (elapsed < duration)
         {
-            //Se simula el movimiento aleatorio en una esfera unitaria
-            Vector3 offset = Random.insideUnitSphere * magnitude;
-            transform.localPosition = originalPos + offset;
+            Vector3 offset = Random.insideUnitCircle * 0.15f; //esto es la magnitud
+            transform.position = originalPos + offset;
 
             elapsed += Time.deltaTime;
+            Debug.Log("He llegado hasta la corrutina por dentro.");
             yield return null;
         }
-
-        //y para cuando termine, tenemos que volver a la posición original
-        transform.localPosition = originalPos;
+        followCamera.enabled = true;
+        transform.position = originalPos;
     }
 }
