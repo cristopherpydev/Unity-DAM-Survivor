@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        // Asegura estado inicial sano
         Time.timeScale = 1f;
         if (pauseMenuUI != null)
             pauseMenuUI.SetActive(false);
@@ -57,10 +57,12 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame(){
-    #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-    #else
-        Application.Quit();
-    #endif
+        inputActions.Player.Disable(); 
+        Time.timeScale = 1f;
+        isPaused = false;
+        Destroy(gameObject);
+        Debug.Log("Hey.");
+        SceneManager.LoadScene("MainMenuScreen");
+
 }
 }

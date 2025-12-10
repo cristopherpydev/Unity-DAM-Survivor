@@ -29,7 +29,7 @@ public class FollowCamera : MonoBehaviour
 
     private void OnDisable()
     {
-        
+        controles.Disable();
     }
     void Start()
     {
