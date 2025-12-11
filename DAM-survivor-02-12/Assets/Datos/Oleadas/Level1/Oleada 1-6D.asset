@@ -15,4 +15,4 @@ MonoBehaviour:
   EnemyPrefab: {fileID: 895878832865680521, guid: aa5c4f7c293d567489b46a50f31b54ab, type: 3}
   SpawnRate: 5
   CantidadDeEnemigos: 24
-  TiempoEntreOleadas: 0
+  TiempoEntreOleadas: 7

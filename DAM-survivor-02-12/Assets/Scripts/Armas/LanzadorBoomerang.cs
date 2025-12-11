@@ -11,14 +11,13 @@ public class LanzadorBoomerang : MonoBehaviour
     [Header("Escalado de daño")]
     public int lvl = 1;
     public float baseDamage = 2f;
-    public float multiplier = 1.2f; // +20% por nivel
+    public float multiplier = 1.2f; 
     [HideInInspector] public float currentDamage;
 
     [Header("Input System")]
-    public Controles inputActions; // tu Input Action Asset
+    public Controles inputActions; 
     public string subirNivelActionName = "SubirNivel";
 
-    private InputAction subirNivelAction;
 
    private void Awake()
     {

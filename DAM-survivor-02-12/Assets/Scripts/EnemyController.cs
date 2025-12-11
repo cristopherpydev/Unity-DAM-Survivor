@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
         }
 
         if (damageOutputPrefab != null)
-        {
+        {////LLAMADA DEL POPUP
             GameObject popup = Instantiate(damageOutputPrefab, transform.position + Vector3.up, Quaternion.identity);
             popup.GetComponent<DamagePopup>().Setup(danio);
             Debug.Log(danio);
@@ -92,20 +92,20 @@ public class EnemyController : MonoBehaviour
 
 
     private void Morir()
-    {
+    {  ////el sistema del loot
         float roll = Random.value;
 
-        if (roll < 0.6f) // verde 60%
+        if (roll < 0.6f) //verde 60%
         {
             if (orbeVerde != null)
                 Instantiate(orbeVerde, transform.position, transform.rotation);
         }
-        else if (roll < 0.9f) // azul 30%
+        else if (roll < 0.9f) //azul 30%
         {
             if (orbeAzul != null)
                 Instantiate(orbeAzul, transform.position, transform.rotation);
         }
-        else // dorado 10%
+        else //dorado 10%
         {
             if (orbeDorado != null)
                 Instantiate(orbeDorado, transform.position, transform.rotation);

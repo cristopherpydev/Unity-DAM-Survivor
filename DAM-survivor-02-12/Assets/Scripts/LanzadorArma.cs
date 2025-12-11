@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LanzadorArma : MonoBehaviour
 {
-    public GameObject[] armas;  // Todas tus armas
+    public GameObject[] armas;
     
     public Transform spawn;
     public float ratioDeDisparo = 1f;

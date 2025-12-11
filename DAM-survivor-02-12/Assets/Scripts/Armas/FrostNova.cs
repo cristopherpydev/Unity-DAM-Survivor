@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class FrostNova : MonoBehaviour
 {
     public int dotDamage = 2;
-    public float dotTime = 0.50f;
+    public float dotTime = 1;
     public float ralentizacion = 2f;
 
     public Transform objetivo;  
@@ -44,9 +44,11 @@ public class FrostNova : MonoBehaviour
         {
             EnemyController enemy = other.GetComponent<EnemyController>();
             if (enemy != null && !enemigosDentro.Contains(enemy))
+            {
                 enemigosDentro.Add(enemy);
                 enemy.Ralentizar(ralentizacion);
-
+            }
+                
         }
     }
 

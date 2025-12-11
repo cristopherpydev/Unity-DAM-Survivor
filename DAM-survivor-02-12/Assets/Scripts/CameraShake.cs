@@ -9,7 +9,6 @@ public class CameraShake : MonoBehaviour{
 
     public void Shake()
     {
-        Debug.Log("He llegado hasta el shake.");
         StopAllCoroutines();
         StartCoroutine(ShakeRoutine());
     }
@@ -27,7 +26,6 @@ public class CameraShake : MonoBehaviour{
             transform.position = originalPos + offset;
 
             elapsed += Time.deltaTime;
-            Debug.Log("He llegado hasta la corrutina por dentro.");
             yield return null;
         }
         followCamera.enabled = true;

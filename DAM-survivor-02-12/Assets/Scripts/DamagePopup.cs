@@ -12,7 +12,6 @@ public class DamagePopup : MonoBehaviour
         textMesh = GetComponent<TextMeshPro>();
     }
 
-    //Esta función la llamaremos justo al crear el objeto para ponerle la cantidad
     public void Setup(int damageAmount)
     {
         textMesh.text = damageAmount.ToString();
@@ -23,7 +22,6 @@ public class DamagePopup : MonoBehaviour
         //1. Mover hacia arriba
         transform.position += Vector3.up * moveSpeed * Time.deltaTime;
 
-        //2. Mirar siempre a la cámara (billboard effect)
         //Invertimos la dirección para que mire DE FRENTE y no nos dé la espalda
         transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
 
@@ -31,9 +29,8 @@ public class DamagePopup : MonoBehaviour
         disappearTimer -= Time.deltaTime;
         if (disappearTimer < 0)
         {
-            //Efecto de desvanecimiento (opcional, pero queda pro)
             Color textColor = textMesh.color;
-            textColor.a -= 3f * Time.deltaTime;// Se vuelve transparente rápido
+            textColor.a -= 3f * Time.deltaTime;
             textMesh.color = textColor;
 
             if (textColor.a < 0)

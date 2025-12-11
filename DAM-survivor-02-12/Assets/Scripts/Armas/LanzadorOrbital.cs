@@ -12,7 +12,7 @@ public class LanzadorOrbital : MonoBehaviour
     [Header("Stats Base")]
     public int baseDamage = 10;
     public float baseSpeed = 180f;
-    public int baseOrbs = 3;   // <--- AHORA 3 ORBES DE BASE
+    public int baseOrbs = 3;
 
     [Header("Escalado")]
     public float speedPerLevel = 20f;
@@ -46,7 +46,7 @@ public class LanzadorOrbital : MonoBehaviour
 
         Debug.Log($"Orbes totales: {cantidad} | Rotación: {speed} | Daño: {damage}");
 
-        // ---------- ELIMINAR ORBES EXISTENTES ----------
+        // ---------- ELIMINACION DE ORBES EXISTENTES ----------
         foreach (var orb in orbes)
         {
             if (orb != null)
@@ -54,7 +54,7 @@ public class LanzadorOrbital : MonoBehaviour
         }
         orbes.Clear();
 
-        // ---------- CREAR NUEVOS ORBES ----------
+        // ---------- CREACION DE NUEVOS ORBES ----------
         for (int i = 0; i < cantidad; i++)
         {
             GameObject nuevo = Instantiate(prefabOrbe);
@@ -67,22 +67,17 @@ public class LanzadorOrbital : MonoBehaviour
             o.anguloInicial = (360f / cantidad) * i;
 
             orbes.Add(o);
-
-            Debug.Log($"Orbe #{i} creado en ángulo {o.anguloInicial}");
         }
     }
-
-    // Cuenta cuántos niveles impares hay: 1, 3, 5, 7...
     int ContarNivelesImpares(int lvl)
     {
         int count = 0;
         for (int i = 1; i <= lvl; i++)
         {
-            if (i % 2 != 0) // impar
+            if (i % 2 != 0)
                 count++;
         }
 
-        // Ahora NO restamos nada porque baseOrbs ya es 3
-        return count - 1; // Restamos solo el primer nivel 1 para que Nivel 1 siga teniendo 3
+        return count - 1; //Restamos solo el primer nivel 1 para que Nivel 1 siga teniendo 3
     }
 }

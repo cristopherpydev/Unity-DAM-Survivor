@@ -15,8 +15,8 @@ public class SuperSpawn : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").transform;
 
         for (int i = 0; i < army; i++)
-        {
-            Vector2 randomPoint = Random.insideUnitCircle * spawnRadius;
+        { ///cada enemigo se instancia normalizado en el borde del radio
+            Vector2 randomPoint = Random.insideUnitCircle.normalized * spawnRadius;
             Vector3 spawnPosition = player.position + new Vector3(randomPoint.x, 0f, randomPoint.y);
 
             Instantiate(zangano, spawnPosition, Quaternion.identity);

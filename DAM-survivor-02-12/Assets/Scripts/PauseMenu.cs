@@ -61,7 +61,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         Destroy(gameObject);
-        Debug.Log("Hey.");
         SceneManager.LoadScene("MainMenuScreen");
 
 }

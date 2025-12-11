@@ -75,9 +75,17 @@ public class PlayerStats : MonoBehaviour
         {
             experiencia -= expSubida;
             nivel++;
-            
-            expSubida = (int)(expSubida * 1.2f); 
-            Debug.Log("¡Subida de nivel! Nivel actual: " + nivel);
+
+            expSubida = (int)(expSubida * 1.2f);
+
+            float porcentajeVida = (float)currentHealth / maxHealth;
+
+            maxHealth = Mathf.RoundToInt(maxHealth * 1.2f);
+
+            currentHealth = Mathf.RoundToInt(maxHealth * porcentajeVida);
+
+            Debug.Log($"[LEVEL UP] Nivel: {nivel}");
+            Debug.Log($"Vida: {currentHealth}/{maxHealth}");
         }
     }
 }

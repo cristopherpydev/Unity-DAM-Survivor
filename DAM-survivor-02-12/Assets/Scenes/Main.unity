@@ -271,9 +271,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e13c4c2e11308d7478d0169935ab1643, type: 2}
   - {fileID: 11400000, guid: b5c9f805ef8f95c4d9e5c1ba73d03c3c, type: 2}
   - {fileID: 11400000, guid: 022c8ccccdba040449017dc9db2be56e, type: 2}
-  - {fileID: 11400000, guid: be3551bbaf290c94e8308bf6ac8fe8b4, type: 2}
-  - {fileID: 11400000, guid: 4befd1fb31c797b45a14dd47e1ad4e1e, type: 2}
-  - {fileID: 11400000, guid: be6bbb066b7d69f4b9bcfac0cd81c3c0, type: 2}
   - {fileID: 11400000, guid: 261dbef1a99521b46bd9cf7f5e2a1ee1, type: 2}
   - {fileID: 11400000, guid: 564edc3071a79c44083234b1096b580a, type: 2}
   - {fileID: 11400000, guid: b339dada73cf2d44b9b9045d5b5b57b7, type: 2}
@@ -944,21 +941,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &815743977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41514a30f4097814590d03d32e00b9de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponManager
-  armasPrefab:
-  - {fileID: 199315484580571585, guid: 716ef14c2bff4a346844c954e0216322, type: 3}
-  - {fileID: 3579617465790815876, guid: c585fe7d2f04c634d97f64ebebdd1ed8, type: 3}
 --- !u!114 &815743978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,7 +967,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815743969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c0bba0330edff204f8867343a21ccc59, type: 3}
   m_Name: 
@@ -1315,9 +1297,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 815743977}
-    - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 815743976}
     - targetCorrespondingSourceObject: {fileID: 6882547792959792784, guid: 4a3dbda8eb56d194e8208f449fb07392, type: 3}
       insertIndex: -1
@@ -1350,7 +1329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LanzadorFrostNova
   frostNovaPrefab: {fileID: 4761428965184973721, guid: 9f96035d5c222804d9c6c2904bf1ff9e, type: 3}
-  nivel: 1
+  nivel: 10
   "da\xF1oBase": 2
   ralentizacionBase: 2
   "progresionDa\xF1o": 0.5

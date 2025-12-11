@@ -38,7 +38,6 @@ public class LanzadorFrostNova : MonoBehaviour
 
     void Update()
     {
-        // Si el valor en el inspector cambió → actualizamos stats
         if (nivel != nivelAnterior)
         {
             nivelAnterior = nivel;
